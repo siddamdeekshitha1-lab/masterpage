@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="masterpage.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+   <style>
+       .navbar{
+           display:flex;
+           justify-content:space-between;
+           background-color:#333;
+           padding:1rem;
+       }
+       .navbar.logo{
+           color:white;
+           font-size:1.5rem;
+       }
+       .nav-links{
+           list-style:none;
+           display:flex;
+       }
+       .nav-links li{
+           margin-left:20px;
+       }
+       .nav-links a{
+           color:white;
+           text-decoration:none;
+       }
+   </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <h1>MASTER PAGE</h1>
+            <header>
+                <nav class="navbar">
+                    <div class="logo">MyBrand</div>
+                    <ul class="nav-links">
+                        <li><a href="About.aspx">About</a></li>
+                        <li><a href="Services.aspx">Service</a></li>
+                        <li><a href="login.aspx">Login</a></li>
+                        <li><a href="Contact.aspx">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                MAIN PAGE CONTENT GOES HERE
+            </asp:ContentPlaceHolder>
+            <h1>Footer @2026 copy rights </h1>
+        </div>
+    </form>
+</body>
+</html>
